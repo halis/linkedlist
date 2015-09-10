@@ -5,44 +5,45 @@ A no dependency implementation of a linked list in JavaScript.
 var list = new LinkedList([1,2,3]);
 list.print(); // 1 -> 2 -> 3
 
-console.log(list.addFirst(4)); // Node {value: 4, next: Node, previous: null}
-console.log(list.addLast(4)); // Node {value: 4, next: null, previous: Node}
+console.log('Added: ', list.addFirst(4)); // Added: Node {value: 4, next: Node, previous: null}
+console.log('Added: ', list.addLast(4)); // Added: Node {value: 4, next: null, previous: Node}
 list.print(); // 4 -> 1 -> 2 -> 3 -> 4
 
-console.log(list.addBefore(42, 0)); // Node {value: 42, next: Node, previous: null}
+console.log('Added: ', list.addBefore(42, 0)); // Added: Node {value: 42, next: Node, previous: null}
 
 list.print(); // 42 -> 4 -> 1 -> 2 -> 3 -> 4
 
-console.log(list.first); // Node {value: 42, next: Node, previous: null}
-console.log(list.first.next); // Node {value: 4, next: Node, previous: Node}
+console.log('First: ', list.first); // First: Node {value: 42, next: Node, previous: null}
+console.log('Next: ', list.first.next); // Next: Node {value: 4, next: Node, previous: Node}
+console.log('Previous: ', list.last.previous); // Previous: Node {value: 3, next: Node, previous: Node}
 
-console.log(list.addAfter(43, 0)); // Node {value: 43, next: Node, previous: Node}
+console.log('Added: ', list.addAfter(43, 0)); // Added: Node {value: 43, next: Node, previous: Node}
 list.print(); // 42 -> 43 -> 4 -> 1 -> 2 -> 3 -> 4
 
-console.log(list.addLast(42)); // Node {value: 42, next: null, previous: Node}
+console.log('Added: ', list.addLast(42)); // Added: Node {value: 42, next: null, previous: Node}
 list.print(); // 42 -> 43 -> 4 -> 1 -> 2 -> 3 -> 4 -> 42
 
-console.log(list.atIndex(2)); // Node {value: 4, next: Node, previous: Node}
-console.log(list.findFirst(42)); // Node {value: 42, next: Node, previous: null}
-console.log(list.findLast(42)); // Node {value: 42, next: null, previous: Node}
-console.log(list.findAll(42)); // [Node, Node]
+console.log('Index 2: ', list.atIndex(2)); // Index 2: Node {value: 4, next: Node, previous: Node}
+console.log('Find First: ', list.findFirst(42)); // Find First: Node {value: 42, next: Node, previous: null}
+console.log('Find Last: ', list.findLast(42)); // Find Last: Node {value: 42, next: null, previous: Node}
+console.log('Find All: ', list.findAll(42)); // Find All: [Node, Node]
 
-console.log(list.last); // Node {value: 42, next: null, previous: Node}
+console.log('Last: ', list.last); // Last: Node {value: 42, next: null, previous: Node}
 
-console.log(list.length); // 8
+console.log('Length: ', list.length); // Length: 8
 
-console.log(list.toArray()); // [Node, Node, Node, Node, Node, Node, Node, Node]
+console.log('To Array: ', list.toArray()); // To Array: [Node, Node, Node, Node, Node, Node, Node, Node]
 
 list.print(); // 42 -> 43 -> 4 -> 1 -> 2 -> 3 -> 4 -> 42
-console.log(list.removeAt(0)); // Node {value: 42, next: Node, previous: null}
+console.log('Remove At: ', list.removeAt(0)); // Remove At: Node {value: 42, next: Node, previous: null}
 list.print(); // 43 -> 4 -> 1 -> 2 -> 3 -> 4 -> 42
 
-console.log(list.removeFirst()); // Node {value: 43, next: Node, previous: null}
-console.log(list.removeLast()); // Node {value: 4, next: Node, previous: null}
+console.log('Remove First: ', list.removeFirst()); // Remove First: Node {value: 43, next: Node, previous: null}
+console.log('Remove Last: ', list.removeLast()); // Remove Last: Node {value: 4, next: Node, previous: null}
 list.print(); // 4 -> 1 -> 2 -> 3 -> 4
 
-console.log(list.removeNode(list.atIndex(1))); // true
+console.log('Remove Node: ', list.removeNode(list.atIndex(1))); // Remove Node: true
 list.print(); // 4 -> 2 -> 3 -> 4
 
-console.log(list.clear()); // LinkedList {first: null, last: null, length: 0}
+console.log('Clear: ', list.clear()); // Clear: LinkedList {first: null, last: null, length: 0}
 ```
