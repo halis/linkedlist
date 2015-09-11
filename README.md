@@ -1,5 +1,5 @@
 # linkedlist
-A no dependency implementation of a linked list in JavaScript.
+A no dependency implementation of a doubly-linked list in JavaScript.
 
 ```javascript
 var list = new LinkedList([1,2,3]);
